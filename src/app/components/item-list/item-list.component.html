@@ -1,0 +1,13 @@
+<div *ngIf="error" class="error-message">
+    {{ error }}
+</div>
+<h1>Mobile Phone</h1>
+<ul *ngIf="!error" class="item-list">
+    <li *ngFor="let item of items" class="item">
+        <img [src]="item.IMAGE" alt="{{ item.NAME }}" class="item-image">
+        <div class="item__container">
+            <h2>{{ item.NAME }}</h2>
+            <p>{{ item.DESCRIPTION }}</p>
+        </div>
+    </li>
+</ul>
